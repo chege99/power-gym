@@ -1,47 +1,59 @@
 <?php
-require ("../php/dbcon.php");
-//Insert Member
+require ("../Admin/php/dbcon.php");
+global $link;
+
 if(isset($_POST['btnsavenew'])){
-	$password= filter_var($_POST['password'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	
+	
+
 	$firstname= filter_var($_POST['firstname'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$lastname= filter_var($_POST['lastname'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$email= filter_var($_POST['email'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$phone= filter_var($_POST['phone'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$address= filter_var($_POST['address'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
-	CreateUser($password, $firstname, $lastname, $email, $phone, $address);
+	CreateMember($firstname,$lastname,$email,$phone,$address);
+	/*
+echo "string". $plan;
+echo "string". $startdate;
+echo "string". $paymentstatus;
+echo "string". $firstname;
+echo "string". $lastname;
+echo "string". $email;
+echo "string". $phone;
+echo "string". $address;
+//*/
+
 
 }
 
 
-function CreateUser($password, $firstname, $lastname, $email, $phone, $address){
 
-	require ("../php/dbcon.php");	
+function CreateMember($firstname,$lastname,$email,$phone,$address){
+	require ("../Admin/php/dbcon.php");	
 	
 	if(validateEmail($email)){
 		
 		$registered_person_id=CreatePerson($firstname,$lastname,$email,$phone,$address);
 		
 		$query="INSERT INTO
-				 	tbl_users(person_id,password)
+				 	tbl_members(person_id)
 		 		VALUES (
-		 			'".$registered_person_id."',
-		 			'".$password."'  )";
+		 			'".$registered_person_id."')";
+
 		 $query_exec= mysqli_query($link,$query) or die (mysqli_error());
-		 header("location: ../users.php?success");
+		 header("location: ../index.php?success");
 		
 
 	}else{
 		echo "Email Already Exists, Please register Member with valid email"; 
 	}
-
-
+	//create person
+	//if(pid is is_nan(val))
 }
 
-
 function CreatePerson($firstname,$lastname,$email,$phone,$address){
-	require ("../php/dbcon.php");
+	require ("../Admin/php/dbcon.php");
 	$date=date('Y-m-d H:i:s');
 
 	$query="INSERT INTO
@@ -52,7 +64,7 @@ function CreatePerson($firstname,$lastname,$email,$phone,$address){
 			 	'".$email."',
 			 	'".$phone."',
 			 	'".$address."',
-			 	'".$date."'   )";
+			 	'".$date."'  )";
 
 	$query_exec= mysqli_query($link,$query) or die (mysqli_error());
 	
@@ -64,11 +76,10 @@ function CreatePerson($firstname,$lastname,$email,$phone,$address){
 	return $newperson_id;
 	
 }
-
-
+ 
 
 function ValidateEmail($email){
-	require ("../php/dbcon.php");
+	require ("../Admin/php/dbcon.php");
 	$query="SELECT * FROM tbl_people WHERE email='".$email."'";
 	$query_exec= mysqli_query($link,$query) or die (mysqli_error());
 
@@ -76,10 +87,11 @@ function ValidateEmail($email){
 	$row = mysqli_fetch_array($query_exec);
 
 
-	if($count > 0){
+	if($count > 0){//exists
 		return false;
 	}else{
 		return true;
 	}
 }
 
+?>

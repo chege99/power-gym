@@ -1,3 +1,5 @@
+ 
+
 		<!-- start footer Area -->		
 			<footer class="footer-area" style="margin-top: ; background-color: #f2f2f2">
 				<div style="height: 5px; background-color: #F6214B">
@@ -9,12 +11,16 @@
 							Power Gym
 						</p>
 						<div class="col-lg-6 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-							<a href="tel:+440 123 12 658 439"><i class="fa fa-whatsapp"></i></a>
+							<a href="<?php echo $facebooklink;?>"><i class="fa fa-facebook"></i></a>
+							<a href="<?php echo $twitterlink;?>"><i class="fa fa-twitter"></i></a>
+							<a href="<?php echo $instagramlink;?>"><i class="fa fa-instagram"></i></a>
+							<a href="tel:<?php echo $whatsapplink;?>"><i class="fa fa-whatsapp"></i></a>
 						</div>
 					</div>
+					
+
+
+
 				</div>
 			</footer>	
 

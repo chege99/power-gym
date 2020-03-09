@@ -1,13 +1,19 @@
-<?php include('php/session.php'); ?>
+<?php 
+include('php/dbcon.php'); 
+include('php/session.php'); ?>
 <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Portal</title>
+    <title>Portal  <?php echo "|| Power-Gym" ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- datapicker CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/datapicker/datepicker3.css">
+
     
     <?php include('links.php'); ?>
 
@@ -19,6 +25,40 @@
         #sidemenuactive a{
             color: #f8f9fa;
             text-decoration: none;
+        }
+        .pd-read{
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: 0.5px solid white;
+            background-color: red;
+            color: white;
+        }
+        .pd-reply{
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: 0.5px solid red;
+            background-color: white;
+            color: red;
+        }
+        .btncustom_save{
+            color: red;
+            border: 0.5px solid red;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 25px;
+            margin-right: 30px;
+        }
+        .sp-expired{
+            color: white;
+            background-color: orange;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .sp-active{
+            color: white;
+            background-color: green;
+            padding: 4px 10px;
+            border-radius: 4px;
         }
     </style>
 

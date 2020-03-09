@@ -45,6 +45,12 @@
     <script src="js/metisMenu/metisMenu-active.js"></script>
     <!-- morrisjs JS
 		============================================ -->
+         <!-- datapicker JS
+        ============================================ -->
+    <script src="js/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/datapicker/datepicker-active.js"></script>
+
+    
     <script src="js/morrisjs/raphael-min.js"></script>
     <script src="js/morrisjs/morris.js"></script>
     <script src="js/morrisjs/morris-active.js"></script>

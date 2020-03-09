@@ -1,7 +1,7 @@
  <?php
   $page_title="Admin";
   include('includes/header.php'); 
-?>
+?> 
 
 <div class="mailbox-area mg-tb-15">
             <div class="container-fluid">
@@ -13,19 +13,13 @@
                                 <ul class="mailbox-list">
                          
                                     <li class="active">
-                                        <a  data-toggle="tab" href="#TabUsers">
-                                        	<i class="fa fa-envelope"></i> Users
-										</a>
-                                    </li>
-                                    <li>
                                         <a  data-toggle="tab" href="#TabSocial"><i class="fa fa-globe"></i> Social Links </a>
                                     </li>
                                      <li>
                                         <a  data-toggle="tab" href="#TabContacts"><i class="fa fa-phone"></i> Contact Details </a>
                                     </li>
-                                   
                                      <li>
-                                        <a  data-toggle="tab" href="#TabSubscriptions"><i class="fa fa-pie-chart"></i> Subscriptions </a>
+                                        <a  data-toggle="tab" href="#TabSchedules"><i class="fa fa-lock"></i> Operating Hours </a>
                                     </li>
                                     
                                 </ul>
@@ -54,26 +48,18 @@
                             <div class="panel-body">
                             
                             <div class="tab-content">
-                                <div id="TabUsers" class="tab-pane in active animated flipInX custon-tab-style1">
-                                    <?php
-                                        include('Tables/users_table.php');
-                                    ?>
-                                </div>
-                                <div id="TabSocial" class="tab-pane animated flipInX custon-tab-style1">
-                                    <?php
-                                        include('Forms/admin_social.php');
-                                    ?>
+                                
+                                <div id="TabSocial" class="tab-pane active animated flipInX custon-tab-style1">
+                                  <form action="php/exec_admin.php" method="POST"><?php include('Forms/admin_social.php') ?>  
+                                   </form>
                                 </div>
                                 <div id="TabContacts" class="tab-pane animated flipInX custon-tab-style1">
-                                    <?php
-                                        include('Forms/admin_contacts.php');
-                                    ?>
+                                   <form action="php/exec_admin.php" method="POST"><?php include('Forms/admin_contacts.php') ?>
+                                   </form>
                                 </div>
-                                
-                                     <div id="TabSubscriptions" class="tab-pane animated flipInX custon-tab-style1">
-                                          <?php
-                                        include('Tables/admin_subscriptions.php');
-                                    ?>
+                                <div id="TabSchedules" class="tab-pane animated flipInX custon-tab-style1">
+                                   <form action="php/exec_admin.php" method="POST"><?php include('Forms/admin_schedules.php') ?>
+                                   </form>
                                 </div>
                          </div>
                         

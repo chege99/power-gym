@@ -1,21 +1,6 @@
-    <div id="AddEditModalSubscription" class="modal modal-adminpro-general FullColor-popup-DangerModal fade" role="dialog" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header header-color-modal bg-color-4">
-                    <h4 class="modal-title">Add/Edit Subscription</h4>
-                    <div class="modal-close-area modal-close-df">
-                        <a class="close" data-dismiss="modal" href="#"><i class="fa fa-close"></i></a>
-                    </div>
-                </div>
-                <div class="modal-body">
-                   
-
-
-
-
 <fieldset>
     <div class="my-formgroup-title">
-        <h3>Subscription Details <?php echo $member_id;?></h3>
+        <h3>Subscription Details</h3>
     </div>
 
         <div class="form-group-inner">
@@ -49,13 +34,3 @@
             </div>
         </div>
 </fieldset>
-
-
-
-
-
-                </div>
-               
-            </div>
-        </div>
-    </div>

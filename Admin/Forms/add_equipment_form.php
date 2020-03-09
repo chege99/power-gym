@@ -32,10 +32,11 @@
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                 <div class="form-select-list">
                     <select class="form-control custom-select-value" name="eq_quality" id="eq_quality">
-                            <option value="1">Select 1</option>
-                            <option value="2">Select 2</option>
-                            <option value="3">Select 3</option>
-                        </select>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Aged but usable">Aged but usable</option>
+                            <option value="Damaged">Damaged</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -57,22 +58,6 @@
                         </div>
                             <input type="text" id="append-big-btn" placeholder="no file selected">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-       <div class="form-group-inner">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <label class="login2 pull-right pull-right-pro">Status</label>
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <div class="form-select-list">
-                    <select class="form-control custom-select-value" id="eq_status" name="eq_status">
-                            <option value="1">Select 1</option>
-                            <option value="2">Select 2</option>
-                            <option value="3">Select 3</option>
-                    </select>
                 </div>
             </div>
         </div>

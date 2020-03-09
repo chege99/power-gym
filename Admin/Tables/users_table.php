@@ -2,12 +2,8 @@
  <div class="product-status mg-tb-15">
             <div class="containerz">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0; margin: -24px auto;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
                         <div class="product-status-wrap">
-                            <h4>Users</h4>
-                            <div class="add-product">
-                                <a href="#" data-toggle="modal" style="color: white; margin-top: -4px;" data-target="#AddEditModal">Add User</a>
-                            </div>
                             <table>
                                 <tr>
                                     <th>User ID</th>
@@ -21,10 +17,9 @@
 
 
 <?php
-//user_id,password,rest_token,person_id,added_by_uid        //person_id,firstname,lastname,email,phone,address,date_added
 
             $query="SELECT 
-                        usr.user_id,usr.password,usr.rest_token,usr.person_id,usr.added_by_uid,
+                        usr.user_id,usr.password,usr.person_id,
                         psn.person_id,psn.firstname,psn.lastname,psn.email,psn.phone,psn.address,psn.date_added
                     FROM
                         tbl_users usr
@@ -39,6 +34,7 @@
 
 
 $result=mysqli_query($link,$query) or die (mysql_error());
+$counter=0;
 
   while ($row=mysqli_fetch_array($result)) {
     
@@ -54,7 +50,7 @@ $result=mysqli_query($link,$query) or die (mysql_error());
 
 <tr>
     <td>
-        <?php echo $user_id;?>
+        <?php echo ++$counter;?>
     </td>
     <td>
         <?php echo $firstname." ".$lastname;?>
@@ -69,8 +65,7 @@ $result=mysqli_query($link,$query) or die (mysql_error());
         <?php echo $address;?>
     </td>
     <td>
-        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true" disabled="true"></i></button>
     </td>
 </tr>
 <?php

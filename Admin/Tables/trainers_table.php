@@ -26,7 +26,7 @@
 
 
 $result=mysqli_query($link,$query) or die (mysql_error());
-
+$counter=0;
   while ($row=mysqli_fetch_array($result)) {
     
         $trainer_id=$row['trainer_id'];
@@ -41,7 +41,7 @@ $result=mysqli_query($link,$query) or die (mysql_error());
 
 <tr>
     <td>
-        <?php echo $trainer_id;?>
+        <?php echo ++$counter;?>
     </td>
     <td>
         <?php echo $firstname." ".$lastname;?>
@@ -56,8 +56,8 @@ $result=mysqli_query($link,$query) or die (mysql_error());
         <?php echo $address;?>
     </td>
     <td>
-        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+       <button data-toggle="tooltip" title="Trash" class="pd-setting-ed" onclick="deleteConfirm('<?php echo $row["trainer_id"]; ?>');"><i class="fa fa-trash-o" aria-hidden="true" ></i>
+        </button>
     </td>
 </tr>
 <?php
@@ -65,3 +65,13 @@ $result=mysqli_query($link,$query) or die (mysql_error());
 ?>
 
 </table>
+
+<script lang="javascript">
+    function deleteConfirm(trainer_id){
+        var option = confirm('Delete this Trainer From Database? \nDo you want to continue?');
+        if(option == true){
+            window.location.assign("php/exec_form_trainer.php?del_trainer_id=" + trainer_id);
+        }
+    }
+</script>
+

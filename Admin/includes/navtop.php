@@ -30,21 +30,7 @@
                                         <div class="header-right-info">
                                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                              
-                                                <li class="nav-item">
-                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
-															<span class="admin-name">
-<?php echo "session_id".$session_id;?>
-                                                            </span>
-															<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
-														</a>
-                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                        <li><a href="#"><span class="fa fa-cog author-log-ic"></span>Settings</a>
-                                                        </li>
-                                                        <li><a href="login.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
+                            <li><a href="php/logout.php" style="font-size: 18px">Logout<span style="font-size: 20px; padding-left: 8px" class="fa fa-sign-out author-log-ic"></span></a></li>
                                                
                                             </ul>
                                         </div>

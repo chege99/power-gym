@@ -7,10 +7,10 @@
             <!--Analysis-->
             <div class="product-new-slist-area"style="" >
             <div class="container-fluid">
-                <div class="row" style="padding-top: 50px;">
+                <div class="row" style="padding-top: 30px;">
                      
                        <div class="menucard col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                       <a href="">
+                       <a href="members.php">
                                     <div class="single-new-trend zmg-t-30" style="text-align: center;">
                                    
                                     <div> <i class="fa fa-user" style="font-size: 120px" aria-hidden="true"></i>
@@ -31,7 +31,7 @@
                        </a>
                     </div>
                      <div class="menucard col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                       <a href="">
+                       <a href="trainers.php">
                                     <div class="single-new-trend zmg-t-30" style="text-align: center;">
                                    
                                     <div> <i class="fa fa-life-buoy" style="font-size: 120px" aria-hidden="true"></i>
@@ -52,7 +52,7 @@
                        </a>
                     </div>
                      <div class="menucard col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                       <a href="">
+                       <a href="equipment.php">
                                     <div class="single-new-trend zmg-t-30" style="text-align: center;">
                                    
                                     <div> <i class="fa fa-tags" style="font-size: 120px" aria-hidden="true"></i>
@@ -73,7 +73,7 @@
                        </a>
                     </div>
                      <div class="menucard col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                       <a href="">
+                       <a href="mailbox.php">
                                     <div class="single-new-trend zmg-t-30" style="text-align: center;">
                                    
                                     <div> <i class="fa fa-envelope" style="font-size: 120px" aria-hidden="true"></i>
@@ -87,14 +87,14 @@
                                         <h4 style="color:#635959"> 
                                         <i class="fa fa-cog" style="font-size: 15px; " aria-hidden="true">
                                         </i>
-                                              View & reply messages
+                                              Inbox
                                         </h4>
                                     </div>
                                 </div>
                        </a>
                     </div>
                      <div class="menucard col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                       <a href="">
+                       <a href="admin.php">
                                     <div class="single-new-trend zmg-t-30" style="text-align: center;">
                                    
                                     <div> <i class="fa fa-cog" style="font-size: 120px" aria-hidden="true"></i>
@@ -108,7 +108,7 @@
                                         <h4 style="color:#635959"> 
                                         <i class="fa fa-cog" style="font-size: 15px; " aria-hidden="true">
                                         </i>
-                                              Manage users & Website Configurations
+                                              Configurations
                                         </h4>
                                     </div>
                                 </div>
@@ -120,40 +120,7 @@
                      </div>
 
                      <div class="menucard col-lg-6 col-md-6 col-sm-6 col-xs-12" >
-                       
-                      <div class="row">
-                        <div class="pane-header">
-                            <h4>Clock in/ Clock out person in the GYM</h4>
-                          </div>
-                          <div class="col-lg-6 co-md-6 single-new-trend " style="padding: 0px;">
-                          
-                          <div class="pane-body">
-                                  <h4 style="color:#635959; text-align: center; margin-top: 30px;"> 
-                                        <i class="fa fa-clock-o" style="font-size: 105px; " aria-hidden="true"></i>
-                                  </h4>
-                                  
-                                     <h4 class="btn btn-custon-rounded-four btn-success" style="color: white;padding: auto 15px;text-align: center;margin-top: 10px;"><a href=""style="color: white;">Clock in </a>
-                                    </h4>
-                                 
-                          </div>
-                        </div>
-
-                        <div class="col-lg-6 co-md-6 single-new-trend " style="padding: 0px;">
-                          
-                          <div class="pane-body">
-                                  <h4 style="color:#635959; text-align: center; margin-top: 30px;"> 
-                                        <i class="fa fa-sign-out" style="font-size: 105px; " aria-hidden="true"></i>
-                                  </h4>
-                                  
-                                     <h4 class="btn btn-custon-rounded-four btn-warning" style="color: white;padding: auto 15px;text-align: center;margin-top: 10px;"><a href=""style="color: white;">Clock out </a>
-                                    </h4>
-                                 
-                          </div>
-                        </div>
-
-
-                      </div>
-
+             
                     </div>
 
                 </div>

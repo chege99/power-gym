@@ -1,5 +1,5 @@
  <?php
-  $page_title="Members";
+  $page_title="Users";
   include('includes/header.php'); 
 ?>
 
@@ -9,13 +9,13 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                         <div class="product-status-wrap">
-                            <h4>Members List</h4>
+                            <h4>Users List</h4>
                             <div class="add-product">
-                                <a href="#" data-toggle="modal" data-target="#AddEditModal">Add Member</a>
+                                <a href="#" data-toggle="modal" data-target="#AddEditModal">Add User</a>
                             </div>
                          
 
-                         <?php include('Tables/members_table.php'); ?>
+                         <?php include('Tables/users_table.php'); ?>
 
                             
                         </div>
@@ -29,6 +29,6 @@
 
 
 
-<?php include('Modals/members-add.php');?>
+<?php include('Modals/user-add.php');?>
 
 <?php include('includes/footer.php'); ?>

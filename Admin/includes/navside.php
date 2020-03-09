@@ -19,7 +19,7 @@
 
 <li id="<?php echo ($page_title=="Members") ? 'sidemenuactive' : '' ;?>">
     <a href="members.php" aria-expanded="false">
-        <i class="fa fa-user big-icon icon-wrap sub-icon-mg" aria-hidden="true"></i> 
+        <i class="fa fa-list big-icon icon-wrap sub-icon-mg" aria-hidden="true"></i> 
         <span class="mini-click-non">Members</span>
     </a>
 </li>
@@ -46,6 +46,14 @@
     </a>
 </li>
 </li>
+
+<li  id="<?php echo ($page_title=="Users") ? 'sidemenuactive' : '' ;?>">
+    <a href="users.php" aria-expanded="false">
+        <i class="fa big-user fa-user icon-wrap" aria-hidden="true"></i> 
+        <span class="mini-click-non">Users</span>
+    </a>
+</li>
+
 
 <li  id="<?php echo ($page_title=="Admin") ? 'sidemenuactive' : '' ;?>">
     <a href="admin.php" aria-expanded="false">

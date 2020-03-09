@@ -9,7 +9,24 @@ if(isset($_POST['btnsavenew'])){
 	$phone= filter_var($_POST['phone'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$address= filter_var($_POST['address'],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	CreateTrainer($firstname,$lastname,$email,$phone,$address);
-}
+}else if(isset($_REQUEST["del_trainer_id"])){
+    
+    $trainer_id = $_REQUEST["del_trainer_id"];
+    
+    $sql = "delete from  tbl_trainers where trainer_id = '".$trainer_id."' ";
+    
+
+        $query_action = mysqli_query($link, $sql) or die(mysql_error());
+       
+        if($query_action){
+          echo "deleted";
+          header("Location: ../trainers.php?deleted");
+        }else{
+           echo "error";
+          header("Location: ../trainers.php?error");
+        }
+
+ }
 
 
 function CreateTrainer($firstname,$lastname,$email,$phone,$address){

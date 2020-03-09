@@ -1,3 +1,7 @@
+	<?php
+		include('Admin/php/dbcon.php');
+		include('get_global_values.php');
+	?>
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -14,7 +18,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Fitness</title>
+		  <title><?php echo "Power-Gym || Fitness" ?></title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -71,7 +75,8 @@
 					border-bottom: .5px solid #CDCDCD; padding-bottom: 15px;
 					border-radius: 10px;
 				}
-				.single-carusel:hover{
+				.single-carusel{
+					margin-top: 25px;
 					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 					color: red;
 				}
@@ -257,19 +262,40 @@
 			</style>
 		</head>
 		<body>	
+
+			<?php
+				include_once("admin/php/dbcon.php");
+
+				$query="SELECT value FROM tbl_config_contact_info WHERE title='email'";
+				$sql= mysqli_query($link,$query);
+				$count=mysqli_num_rows($sql);
+				$result= mysqli_fetch_assoc($sql);
+				$email=$result['value'];
+
+				$query="SELECT value FROM tbl_config_contact_info WHERE title='phone_number'";
+				$sql= mysqli_query($link,$query);
+				$count=mysqli_num_rows($sql);
+				$result= mysqli_fetch_assoc($sql);
+				$phone=$result['value'];
+				
+			?>
 			  <header id="header">
 		  		<div class="header-top">
 		  			<div class="container">
 				  		<div class="row align-items-center justify-content-center">
 				  			<div class="col-md-4 col-4 header-top-left no-padding">
 				        		<a href="mailto:support@colorlib.com"><span class="lnr lnr-inbox"></span></a>
-				        		<a class="contact-texts" href="mailto:support@colorlib.com">support@colorlib.com</a>		
+				        		<a class="contact-texts" href="mailto:support@colorlib.com">
+				        			<?php echo $email;?>
+				        		</a>		
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-bottom no-padding">
 				        		<a href="index.html"><img class="img-fluid" src="img/logo2.png" alt="" title="" /></a>			
 				  			</div>
 				  			<div class="col-md-4 col-4 header-top-right no-padding">
-				        		<a class="contact-texts" href="tel:+440 123 12 658 439">+440 123 12 658 439</a>
+				        		<a class="contact-texts" href="tel:+440 123 12 658 439">
+				        			<?php echo $phone;?>
+				        		</a>
 				        		<a href="tel:+440 123 12 658 439"><span class="lnr lnr-phone-handset"></span></a>
 				  			</div>				  							  			
 				  		</div>			  					
@@ -297,7 +323,7 @@
 							  </li>
 							  <!--Login-->
 							  <li class="nav-login">
-							  	<a href="#">Login <span class="lnr lnr-arrow-right"></span></a>
+							  	<a href="admin/">Login <span class="lnr lnr-arrow-right"></span></a>
 							  </li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		

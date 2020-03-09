@@ -102,7 +102,6 @@
                                
                             </div>
                             <input type="submit" name="login" value="login" class="btn btn-success btn-block loginbtn">
-                            <a class="btn btn-default btn-block" href="#">Forgot Password</a>
                         </form>
                     </div>
                 </div>

@@ -20,21 +20,21 @@
 								    </tr>
 								  </thead>
 								  <tbody>
-								    <tr>
-								      <th class="name" scope="row">Weekdays</th>
-								      <td>10.00 am</td>				      
-								      <td>10.00 pm</td>				      				      
-								    </tr>
+								   <tr>
+								   	  <th class="name" scope="row">Weekdays</th>
+								      <td><?php echo $OT_weekday; ?></td>			      
+								      <td><?php echo $CT_weekday; ?></td>
+								   </tr>
 								   <tr>
 								      <th class="name" scope="row">Weekends</th>
-								      <td>10.00 am</td>				      
-								      <td>10.00 pm</td>				      				      
-								    </tr>
-								     <tr>
+								      <td><?php echo $OT_weekend; ?></td>
+								      <td><?php echo $CT_weekend; ?></td>
+								   </tr>
+								   <tr>
 								      <th class="name" scope="row">Holidays</th>
-								      <td>10.00 am</td>				      
-								      <td>10.00 pm</td>				      				      
-								    </tr>			    							 
+								      <td><?php echo $OT_holiday; ?></td>      
+								      <td><?php echo $CT_holiday; ?></td>
+								   </tr>			    							 
 								  </tbody>
 							</table>							
 						</div>

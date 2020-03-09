@@ -10,13 +10,6 @@ include("includes/header.php");
 	<div class="container">
 		<div class="section-top-border">
 						<h3 class="mb-30">Block Quotes</h3>
-						<div class="row">
-							<div class="col-lg-12">
-								<blockquote class="generic-blockquote">
-									Welcome to our pricing plans
-								</blockquote>
-							</div>
-						</div>
 					</div>
 	</div>
 </div>
@@ -30,31 +23,28 @@ include("includes/header.php");
         <th class="qbse">
           Single day pricing
         </th>
-        <th colspan="3" class="qbo">
+        <th colspan="2" class="qbo">
           Long Term pricing
         </th>
       </tr>
       <tr>
         <th class="tl"></th>
         <th class="compare-heading">
-         1 day plan
+         1 Month
         </th>
         <th class="compare-heading">
-         30 days plan
+         2 Months
         </th>
         <th class="compare-heading">
-         1 Month (Consecutive)
-        </th>
-        <th class="compare-heading">
-         3 Months (consecutive)
+         3 Months
         </th>
       </tr>
       <tr>
         <th></th>
        <th class="price-info">
-          <div class="price-was">rate x 30 </div>
+          <div class="price-was">50 x 30 days </div>
           <div class="price-now">
-          	<span>£TOTAL</span>
+          	<span>Ksh.1500</span>
           </div>
           <div>
           	<a href="#" class="price-buy">
@@ -65,9 +55,9 @@ include("includes/header.php");
       
       
         <th class="price-info">
-          <div class="price-was">&nbsp;</div>
+          <div class="price-was">50 x 60 days </div>
           <div class="price-now">
-          	<span>£TOTAL</span>
+          	<span>Ksh 3000</span>
           </div>
           <div>
           	<a href="#" class="price-buy">
@@ -77,9 +67,9 @@ include("includes/header.php");
         </th>
       
        <th class="price-info">
-          <div class="price-was">rate x 30 </div>
+          <div class="price-was">50 x 90 days</div>
           <div class="price-now">
-          	<span>£TOTAL</span>
+          	<span>Ksh. 4500</span>
           </div>
           <div>
           	<a href="#" class="price-buy">
@@ -87,17 +77,7 @@ include("includes/header.php");
           	</a>
           	</div>
         </th>
-       <th class="price-info">
-          <div class="price-was">rate x 30 </div>
-          <div class="price-now">
-          	<span>£TOTAL</span>
-          </div>
-          <div>
-          	<a href="#" class="price-buy">
-          		<span class="hide-mobile">Get Started</span>
-          	</a>
-          	</div>
-        </th>
+      
       
       
       </tr>
@@ -109,7 +89,6 @@ include("includes/header.php");
       </tr>
       <tr>
         <td>Access To Equipment</td>
-        <td></td>
         <td><span class="tickgreen">✔</span></td>
         <td><span class="tickgreen">✔</span></td>
         <td><span class="tickgreen">✔</span></td>

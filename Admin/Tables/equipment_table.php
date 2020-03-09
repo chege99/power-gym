@@ -1,13 +1,11 @@
  <table>
     <tr>
         <th>Equipment ID</th>
-        <th>Image</th>
+        <th>Image Path</th>
         <th>Equipment Name</th>
         <th>Description</th>
-        <th>IMG URL</th>
         <th>Quality</th>
-        <th>Status</th>
-        <th>Actions`</th>
+        <th>Actions</th>
     </tr>
 
       <?php
@@ -24,7 +22,7 @@
 
 
 $result=mysqli_query($link,$query) or die (mysql_error());
-
+$counter=0;
   while ($row=mysqli_fetch_array($result)) {
     $equipment_id=$row['equipment_id'];
     $eq_name=$row['eq_name'];
@@ -39,10 +37,13 @@ $result=mysqli_query($link,$query) or die (mysql_error());
 
 <tr>
     <td>
-        <?php echo $equipment_id;?>
+        <?php //echo $equipment_id;
+            echo ++$counter;
+        ?>
     </td>
+
     <td>
-        <img src="img/new-product/5-small.jpg" alt="" />
+        <?php echo $eq_image_url; ?>
     </td>
 
     <td>
@@ -51,25 +52,20 @@ $result=mysqli_query($link,$query) or die (mysql_error());
     <td>
         <?php echo $eq_description;?>
     </td>
-    <td>
-        <?php echo $eq_image_url;?>
-    </td>
+   
     <td>
         <?php echo $eq_quality;?>
     </td>
     <td>
-        <?php echo $status;?>
-        <button class="pd-setting">Active</button>
-    </td>
-    <td>
+    <!--
         <button data-toggle="tooltip" title="Edit" class="pd-setting-ed" >
             <i class="fa fa-pencil-square-o" aria-hidden="true"> 
             </i>
         </button>
+    -->
        
-        <a data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true" 
-            onclick="deleteConfirm('<?php echo $row["equipment_id"]; ?>');" ></i>
-        </a>
+        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed" onclick="deleteConfirm('<?php echo $row["equipment_id"]; ?>');"><i class="fa fa-trash-o" aria-hidden="true" ></i>
+        </button>
     </td>
 </tr>
 <?php

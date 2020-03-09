@@ -10,7 +10,7 @@
 								<img class="img-fluid" src="img/o1.jpg" alt="">
 								<a href="#"><h4>Regular Exercise</h4></a>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+									As long as your subscrition is active, you can gain access to our various training equipment
 								</p>
 							</div>
 						</div>
@@ -19,7 +19,7 @@
 								<img class="img-fluid" src="img/o2.jpg" alt="">
 								<a href="#"><h4>Training on the go</h4></a>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+									On site trainers to help you set goals and ensure that you achieve them
 								</p>
 							</div>
 						</div>
@@ -28,7 +28,7 @@
 								<img class="img-fluid" src="img/o3.jpg" alt="">
 								<a href="#"><h4>Body Building Packages</h4></a>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+									Build your abs, Muscles, Biceps, Triceps, You name it! We are here for you
 								</p>
 							</div>
 						</div>												
