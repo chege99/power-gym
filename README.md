@@ -12,12 +12,13 @@ Wamp/Xampp server
 2. import the *power_gym.sql* database in '$htdocs/power-gym/database/' directory
 3. run *localhost/power-gym*
 4. To log in to the portal:
+    
     email: MJ@gmail.com
     password: 12121212 
 
 #Screenshot
 Visitors Landing Page
-![](SCREENSHOTS/.JPG)
+![](SCREENSHOTS/Visitors.JPG)
 
 -------Admin Panel---------
 Dashboard
